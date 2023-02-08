@@ -1,3 +1,4 @@
+"use strict";
 let myLibrary = [];
 let counter = 2;
 
@@ -78,26 +79,21 @@ function deleteBook(id){
   for(var i=0; i<myLibrary.length; i++){
     if (myLibrary[i].id == id) {
       myLibrary.splice(i, 1);
-      displayLibrary();
+      
     }
   }
+  displayLibrary();
 }
 
-function changeReadStatus(id){
-  for(var i=0; i<myLibrary.length; i++){
+function changeReadStatus(id) {  
+  for (var i = 0; i < myLibrary.length; i++) {
     let myBook = myLibrary[i];
-    if (myBook.id == id) {
-      if(myBook.read == "Yes") {
-        console.log("not read");
-        myBook.read == "No"
-      } else {
-        console.log("read");
-        myBook.read == "Yes"
-      }
-      displayLibrary();
-    }
-  }
-
+    if (myBook.id == id) { 
+      myBook.read = (myBook.read == "Yes") ? "No" : "Yes";
+      console.log(myBook.read == "Yes" ? "read" : "not read");       
+      displayLibrary();     
+    }   
+  } 
 }
 
 myLibrary.push(new Book("Book1", "Author1", "30", "Yes", 0));
