@@ -8,29 +8,35 @@ const player = (sign) => {
 
 
 const gameBoard = (() => {
-    const board = ["X", "O", "X",
-                   "O", "X", "O",
-                   "O", "O", "X"];
+    const board = ["", "", "",
+                   "", "", "",
+                   "", "", ""];
+
+    const setField = (position, playerSign) => {
+        board[position] = playerSign;
+    }
 
     const getField = (position) => {
         return board[position];
     };
 
-    return { getField };
+    return { getField, setField };
 })();
 
 
 const displayController = (() => {
     const individualFields = document.querySelectorAll(".field");
 
-    console.log("asdg");
-
-    /*individualFields.forEach(
-        (field) => 
-            field.addEventListener("click", (e) => {
-                updateGameboard();
-            })
-    );*/
+    individualFields.forEach(
+        (field) =>             
+            field.addEventListener("click", (e) => 
+                {
+                    if (e.target.textContent !== "") return;
+                    gameController.playRound(e.target.dataset.index);
+                    updateGameboard();
+                }
+            )
+    );
 
     const updateGameboard = () => {
         for (let i = 0; i < individualFields.length; i++) {
@@ -38,7 +44,26 @@ const displayController = (() => {
         }
       };       
       
-      return updateGameboard();
+})();
+
+const gameController = (() => {
+    const playerOne = player("X");
+    const playerTwo = player("O");
+    let round = 1;
+    let gameOver = false;
+    
+    const playRound = (fieldPosition) => {
+        gameBoard.setField(fieldPosition, getCurrentPlayerSign());
+        round++;
+    }
+
+    const getCurrentPlayerSign = () => {
+        return round % 2 === 1 ? playerOne.getSign() : playerTwo.getSign();
+    };
+
+    
+
+    return { playRound };
 })();
 
 
