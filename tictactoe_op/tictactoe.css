@@ -1,10 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+* {
+    font-family: 'Varela Round', sans-serif;
+}
+
 .gameboard {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: 454px;
     height: 454px;
+    background-color: antiquewhite;
     border: 2px solid black;
     margin: 0px auto;
+    padding: 2%;
 }
 
 .field {
@@ -16,4 +24,24 @@
     text-align: center;
     cursor: pointer;
     user-select: none;
+}
+
+#playerBoardContainer {
+    display: block ruby;
+    margin: auto;
+    width: 60%;
+}
+
+.red-color {
+    position: relative;
+    margin: 0;
+    top: 10%;
+    color: rgb(255, 71, 71);
+}
+
+.blue-color {
+    position: relative;
+    margin: 0;
+    top: 10%;
+    color: rgb(52, 99, 255);
 }
