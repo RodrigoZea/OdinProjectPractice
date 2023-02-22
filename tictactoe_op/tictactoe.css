@@ -45,3 +45,11 @@
     top: 10%;
     color: rgb(52, 99, 255);
 }
+
+#winner-display {
+    text-align: center;
+}
+
+#start-button {
+    text-align: center;
+}

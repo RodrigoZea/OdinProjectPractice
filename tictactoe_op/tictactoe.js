@@ -1,9 +1,9 @@
-const player = (sign) => {
-    //this.playerName = playerName;
+const player = (playerName, sign) => {
+    this.playerName = playerName;
     this.sign = sign;
 
     const getSign = () => { return sign };
-    //const getName = () => { return playerName };
+    const getName = () => { return playerName };
 
     return { getSign };
 };
@@ -60,10 +60,11 @@ const displayController = (() => {
 })();
 
 const gameController = (() => {
-    const playerOne = player("X");
-    const playerTwo = player("O");
+    let playerOne;
+    let playerTwo;
     let round = 1;
     let gameOver = false;
+    let canPlay = false;
 
     const playRound = (fieldPosition) => {
         gameBoard.setField(fieldPosition, getCurrentPlayerSign());
@@ -84,6 +85,20 @@ const gameController = (() => {
         }
 
         round++;
+    }
+
+    const gameStart = () => {
+        console.log("start");
+        let playerOneName = document.getElementById('player1')
+        let playerTwoName = document.getElementById('player2')
+
+        playerOneName.disabled = true;
+        playerTwoName.disabled = true;
+
+        playerOne = player(playerOneName.textContent, "X");
+        playerTwo = player(playerTwoName.textContent, "O");
+
+        canPlay = true;
     }
 
 
@@ -115,7 +130,7 @@ const gameController = (() => {
     const getGameOver = () => {return gameOver};
 
 
-    return { playRound, getGameOver };
+    return { playRound, getGameOver, gameStart };
 })();
 
 

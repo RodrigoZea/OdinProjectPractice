@@ -9,8 +9,7 @@
 
   <div id="playerBoardContainer">
     <label for="player1">Player 1: </label>
-    <input type="text" id="player1" name="player1">
-    <input id="player1btn" type="button" value="Submit name" onclick="">
+    <input type="text" id="player1" name="player1" value="Player1">
 
         <div class="gameboard">
           <div class="field" data-index="0"></div>
@@ -25,10 +24,10 @@
         </div>
 
     <label for="player1">Player 2: </label>
-    <input type="text" id="player2" name="player2">
-    <input id="player2btn" type="button" value="Submit name" onclick="">
+    <input type="text" id="player2" name="player2" value="Player2">
   </div>
 
-  <h2 id="winner-display">asdfasdf</h2>
+  <input id="start-button" type="submit" value="Start" onclick="gameController.gameStart();">
+  <h2 id="winner-display">The winner is: </h2>
 </body>
 </html>

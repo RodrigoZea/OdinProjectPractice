@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Tinos:wght@700&display=swap');
+
+#header {
+    display: inline-block;
+    position: relative;
+    background-color: rgb(201, 186, 145);
+    width: 100%;
+}
+
+#menu-button {
+    display: inline;
+    font-family: 'Tinos', serif;
+    color: rgb(29, 30, 36);
+    padding: 3px;
+}
+
+#image-container {
+    display: inline-block;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 7em;
+    margin: 1em;
+}
+
+
+#sunny-wheel {
+    height: 80%;
+
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    animation: rotation 5s infinite linear;
+}
+#sunny-img {
+    height: 80%;
+    position: absolute;
+    top: -10px;
+    left: 0px;
+    z-index: 1;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
