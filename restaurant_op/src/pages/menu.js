@@ -1,11 +1,11 @@
-const home = () => {
+const menu = () => {
     const content = document.querySelector('#content');
 
     const sampleDiv = document.createElement("div");
-    sampleDiv.innerHTML += "home";
+    sampleDiv.innerHTML += "menu";
     
     content.appendChild(sampleDiv);
 
 }
 
-export default home;
+export default menu;

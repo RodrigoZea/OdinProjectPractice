@@ -65,14 +65,14 @@
     color: white;
 }
 
-#menu-button {
+.menu-button {
     display: inline;
     font-family: 'Tinos', serif;
     color: rgb(29, 30, 36);
     padding: 0.5em;
     font-size: 2.3em;
 }
-#menu-button:hover {
+.menu-button:hover {
     color: white;
     cursor: pointer;
 }

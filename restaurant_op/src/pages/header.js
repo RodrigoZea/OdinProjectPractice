@@ -62,17 +62,20 @@ const header = () => {
     buttonContainer.id = "button-container";
     // Home
     const homeButton = document.createElement("div");
-    homeButton.id = "menu-button";
+    homeButton.className = "menu-button";
+    homeButton.id = "home-btn";
     homeButton.textContent = "HOME";
     buttonContainer.append(homeButton);
     // Menu
     const menuButton = document.createElement("div");
-    menuButton.id = "menu-button";
+    menuButton.className = "menu-button";
+    menuButton.id = "menu-btn";
     menuButton.textContent = "MENU";
     buttonContainer.append(menuButton);
     // About
     const aboutButton = document.createElement("div");
-    aboutButton.id = "menu-button";
+    aboutButton.className = "menu-button";
+    aboutButton.id = "about-btn";
     aboutButton.textContent = "ABOUT";
     buttonContainer.append(aboutButton);
 
