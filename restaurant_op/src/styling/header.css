@@ -1,32 +1,100 @@
 @import url('https://fonts.googleapis.com/css2?family=Tinos:wght@700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&display=swap');
 #header {
-    display: inline-block;
+    display: block;
     position: relative;
-    background-color: rgb(201, 186, 145);
     width: 100%;
+    z-index: 1;
+}
+
+#menu-logo-container {
+    background-color: rgb(255, 206, 71);
+    border-top: 1em solid rgb(190, 65, 48);
+    border-bottom: 1em solid rgb(190, 65, 48);
+    position: inherit;
+    z-index: 1;
+}
+
+#banner::before {
+    content: "";
+    position: absolute;
+    width: 100%; height: 100%;
+    background: url("https://rare-gallery.com/mocahbig/441785-One-Piece-anime-anime-boys-eating-anime-girls-food.jpg") no-repeat;
+    background-position-x: center;
+    background-position-y: -40em;
+    background-size: 120%;
+    filter: grayscale(100%);
+    opacity: 0.1;
+}
+#banner {
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4em 0;
+    width: 100%;
+    z-index: 1;
+    background-color: rgb(29, 28, 36);
+    user-select: none;
+}
+
+#sanji-img {
+    width: 13%;
+    position: absolute;
+    z-index: 0;
+    left: 30em;
+    top: 1em;
+}
+#title-container {
+    position: relative;
+    display: block;
+    width: 40%;
+    
+}
+#banner-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 5em;
+    color: rgb(255, 206, 71);
+    margin-bottom: -0.3em;
+}
+#banner-subtitle {
+    font-family: 'Lora', serif;
+    color: white;
 }
 
 #menu-button {
     display: inline;
     font-family: 'Tinos', serif;
     color: rgb(29, 30, 36);
-    padding: 3px;
+    padding: 0.5em;
+    font-size: 2.3em;
+}
+#menu-button:hover {
+    color: white;
+    cursor: pointer;
 }
 
 #image-container {
-    display: inline-block;
     position: relative;
-    top: 0;
+    bottom: 3em;
     left: 0;
     height: 7em;
-    margin: 1em;
+    display: flex;
+    justify-content: center;
 }
 
+#button-container {
+    text-align: center;
+    position: relative;
+    bottom: 2em;
+    z-index: 1;
+}
 
 #sunny-wheel {
-    height: 80%;
-
+    height: 90%;
     position: relative;
     top: 0;
     left: 0;
@@ -34,10 +102,9 @@
     animation: rotation 5s infinite linear;
 }
 #sunny-img {
-    height: 80%;
+    height: 90%;
     position: absolute;
     top: -10px;
-    left: 0px;
     z-index: 1;
 }
 
